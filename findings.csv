@@ -1,0 +1,6 @@
+severity,title,evidence,recommendation
+High,Missing Strict-Transport-Security,Strict-Transport-Security was not present in the response.,Enable HSTS on HTTPS sites; choose max-age carefully.
+High,Missing Content-Security-Policy,Content-Security-Policy was not present in the response.,Define a restrictive Content-Security-Policy suited to the application.
+Low,Missing Referrer-Policy,Referrer-Policy was not present in the response.,Consider strict-origin-when-cross-origin or a stricter policy.
+Low,Missing Permissions-Policy,Permissions-Policy was not present in the response.,Set a Permissions-Policy appropriate to the features the site needs.
+Info,Server header disclosed,Server: cloudflare,Consider minimizing version/product details in the Server response header.

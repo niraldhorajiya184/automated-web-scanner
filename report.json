@@ -1,0 +1,72 @@
+{
+  "scanner": "Automated Web Scanner",
+  "version": "1.0",
+  "target": "https://silveroakuni.ac.in",
+  "scanned_at": "2026-10-21T03:00:03.964996+00:00",
+  "status_code": 200,
+  "final_url": "https://silveroakuni.ac.in",
+  "headers": {
+    "date": "Wed, 21 Oct 2026 03:00:02 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "close",
+    "server": "cloudflare",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "vary": "RSC,Next-Router-State-Tree,Next-Router-Prefetch,Next-Router-Segment-Prefetch,Accept-Encoding",
+    "x-nextjs-cache": "HIT",
+    "x-nextjs-prerender": "1",
+    "x-nextjs-stale-time": "4294967294",
+    "cache-control": "s-maxage=31536000,",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=iz2Jfsy3XCOlHCt2F2ilqtxKLFZ5yz94%2FcnBt7BsEGNh5fTjlY8LegQWd1dX9RK42%2FpmZSz8%2BznGI0Co%2FeCsQ4tq%2BB%2Bc70hoSg40cwDOFwYPX6ggsXNGAYxCv204mDilBA0fJJ4%3D\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a4dd027b882d678e-SIN",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "cors": {
+    "tested": true,
+    "test_origin": "https://cors-audit.invalid",
+    "observed_headers": {
+      "access-control-allow-origin": null,
+      "access-control-allow-credentials": null,
+      "vary": "RSC,Next-Router-State-Tree,Next-Router-Prefetch,Next-Router-Segment-Prefetch,Accept-Encoding",
+      "options_vary": "RSC,Next-Router-State-Tree,Next-Router-Prefetch,Next-Router-Segment-Prefetch"
+    },
+    "notes": [
+      "No Access-Control-Allow-Origin header was returned for the test Origin."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "High",
+      "title": "Missing Strict-Transport-Security",
+      "evidence": "Strict-Transport-Security was not present in the response.",
+      "recommendation": "Enable HSTS on HTTPS sites; choose max-age carefully."
+    },
+    {
+      "severity": "High",
+      "title": "Missing Content-Security-Policy",
+      "evidence": "Content-Security-Policy was not present in the response.",
+      "recommendation": "Define a restrictive Content-Security-Policy suited to the application."
+    },
+    {
+      "severity": "Low",
+      "title": "Missing Referrer-Policy",
+      "evidence": "Referrer-Policy was not present in the response.",
+      "recommendation": "Consider strict-origin-when-cross-origin or a stricter policy."
+    },
+    {
+      "severity": "Low",
+      "title": "Missing Permissions-Policy",
+      "evidence": "Permissions-Policy was not present in the response.",
+      "recommendation": "Set a Permissions-Policy appropriate to the features the site needs."
+    },
+    {
+      "severity": "Info",
+      "title": "Server header disclosed",
+      "evidence": "Server: cloudflare",
+      "recommendation": "Consider minimizing version/product details in the Server response header."
+    }
+  ]
+}
